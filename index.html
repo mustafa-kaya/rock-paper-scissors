@@ -13,6 +13,46 @@
   <!-- <script src="js/script.js" defer></script> -->
 </head>
 <body>
-  
+  <div class="page">
+    <h1 class="header page__header">ROCK PAPER SCISSORS</h1>
+
+    <div class="board page__board">
+      <div class="board__side">
+        <div class="board__score">23</div>
+        <div class="board__player-name">YOU</div>
+      </div>
+      <img src="img/line.svg" alt="separator">
+      <div class="board__side">
+        <div class="board__player-name">BINARY</div>
+        <div class="board__score">12</div>
+      </div>
+    </div> <!-- .board end -->
+
+    <div class="game page__game">
+      <div class="player-hands">
+        <button class="button">
+          <div class="button__text">ROCK</div>
+          <img src="img/rock-left-white.svg" alt="rock">
+        </button>
+        <button class="button">
+          <div class="button__text">PAPER</div>
+          <img src="img/paper-left-white.svg" alt="rock">
+        </button>
+        <button class="button">
+          <div class="button__text">SCISSORS</div>
+          <img src="img/scissors-left-white.svg" alt="rock">
+        </button>
+      </div>
+      <div class="computer-hands">
+        <button class="button button--reverse">
+          <img src="img/rock-right-black.svg" alt="rock">
+          <div class="button__text">ROCK</div>
+        </button>    
+      </div>
+    </div> <!-- .game end -->  
+    
+    <footer class="footer">Created by <b>Mustafa Kaya</b></footer>
+  </div>
 </body>
 </html>
+

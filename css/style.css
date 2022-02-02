@@ -1,3 +1,90 @@
 /* font-family: 'Playfair Display', serif;
 font-family: 'Work Sans', sans-serif; */
 
+/* .page BLOCK */
+.page {
+  font-family: 'Work Sans', sans-serif;
+}
+
+.page__header, .page__board, .page__game {
+  margin: 50px auto;
+}
+
+/* .header BLOCK */
+.header {
+  font-size: 60px;
+  text-align: center;
+}
+
+/* .board BLOCK */
+.board {
+  max-width: 640px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 13px;
+}
+
+.board__side {
+  display: flex;
+  flex: 1;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.board__score {
+  font-size: 72px;
+}
+
+.board__player-name {
+  font-family: 'Playfair Display', serif;
+  font-size: 36px;
+}
+
+/* .game BLOCK */
+.game {
+  max-width: 640px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* .player-hands BLOCK */
+.player-hands {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+/* .button BLOCK */
+.button {
+  width: 266px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 30px;
+  border: none;
+  border-radius: 15px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.button__text {
+  font-size: 20px;
+}
+
+.button--reverse {
+  color: black;
+  background-color: white;
+  border: 4px solid black;
+} 
+
+/* .footer BLOCK */
+.footer {
+  font-family: 'Playfair Display', serif;
+  width: 100%;
+  height: 2.5rem;
+  bottom: 0;
+  position: absolute;
+  text-align: center;
+}
