@@ -8,9 +8,12 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Work+Sans:wght@900&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/animate.css">
   <link rel="stylesheet" href="css/style.css">
   <!-- <script src="js/script.js" defer></script> -->
+  <script src="js/javascript.js" defer></script>
 </head>
 <body>
   <div class="page">
@@ -18,33 +21,33 @@
 
     <div class="board page__board">
       <div class="board__side">
-        <div class="board__score">23</div>
+        <div class="board__score">00</div>
         <div class="board__player-name">YOU</div>
       </div>
       <img src="img/line.svg" alt="separator">
       <div class="board__side">
         <div class="board__player-name">BINARY</div>
-        <div class="board__score">12</div>
+        <div class="board__score">00</div>
       </div>
     </div> <!-- .board end -->
 
     <div class="game page__game">
       <div class="player-hands">
-        <button class="button">
+        <button class="button" id="rock">
           <div class="button__text">ROCK</div>
           <img src="img/rock-left-white.svg" alt="rock">
         </button>
-        <button class="button">
+        <button class="button" id="paper">
           <div class="button__text">PAPER</div>
-          <img src="img/paper-left-white.svg" alt="rock">
+          <img src="img/paper-left-white.svg" alt="paper">
         </button>
-        <button class="button">
+        <button class="button" id="scissors">
           <div class="button__text">SCISSORS</div>
-          <img src="img/scissors-left-white.svg" alt="rock">
+          <img src="img/scissors-left-white.svg" alt="scissors">
         </button>
       </div>
       <div class="computer-hands">
-        <button class="button button--reverse">
+        <button class="button button--reverse" id="computer">
           <img src="img/rock-right-black.svg" alt="rock">
           <div class="button__text">ROCK</div>
         </button>    
