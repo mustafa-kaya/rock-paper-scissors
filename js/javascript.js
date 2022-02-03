@@ -1,15 +1,8 @@
-const buttons = document.querySelectorAll('button')
-
-for(const button of buttons) {
-  const buttonIcon = button.children[1];
-  button.addEventListener('mouseenter', addAnimation);
-  buttonIcon.addEventListener('animationend', removeAnimation);
-}
-
+// Functions
 function addAnimation(event) {
   const id = event.target.id;
   const buttonIcon = event.target.children[1]; 
-
+  
   if( id === 'rock' ) {
     buttonIcon.classList.add('animate__animated', 'animate__shakeY');
   } else if ( id === 'paper') {
@@ -22,7 +15,7 @@ function addAnimation(event) {
 function removeAnimation(event) {
   const id = event.target.parentElement.id;
   const buttonIcon = event.target;
-
+  
   if( id === 'rock' ) {
     buttonIcon.classList.remove('animate__animated', 'animate__shakeY');
   } else if ( id === 'paper') {
@@ -32,16 +25,25 @@ function removeAnimation(event) {
   }
 }
 
+function createComputerAnimation() {
+  let computerButton = document.getElementById('computer');
+  const weapons = ['rock', 'paper', 'scissors']; 
+  
+  for( let i = 0; i < 100; i++ ) {
+    let index = i % weapons.length;
+    setTimeout(() => {
+      computerButton.children[0].src = `http://127.0.0.1:5500/img/${weapons[index]}-right-black.svg`;
+    }, (450 + (450*i)))
+  }
+}
 
-// Commit: Create computer hand side animation
-// oncelikle bir loop olusturmam lazim ve bu  loop sirasiyla
-// ikonlari degistirecek 
+// Function Firing
+const buttons = document.querySelectorAll('button');
 
-let computerButton = document.getElementById('computer');
-let computerIconURL = computerButton.children[0].src
+for(const button of buttons) {
+  const buttonIcon = button.children[1];
+  button.addEventListener('mouseenter', addAnimation);
+  buttonIcon.addEventListener('animationend', removeAnimation);
+}
 
-computerIconURL = computerIconURL.replace('rock', 'paper')
-
-
-console.log(computerButton)
-
+// createComputerAnimation();
