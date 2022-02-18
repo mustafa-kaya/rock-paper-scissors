@@ -13,6 +13,7 @@
   <link rel="stylesheet" href="css/animate.css">
   <link rel="stylesheet" href="css/style.css">
   <script src="js/animation.js" defer></script>
+  <script src="js/logic.js" defer></script>
   <script src="js/script.js" defer></script>
 </head>
 <body>
@@ -21,13 +22,13 @@
 
     <div class="board page__board">
       <div class="board__side">
-        <div class="board__score">00</div>
+        <div class="board__score" id="player-score">0</div>
         <div class="board__player-name">YOU</div>
       </div>
       <img src="img/line.svg" alt="separator">
       <div class="board__side">
         <div class="board__player-name">BINARY</div>
-        <div class="board__score">00</div>
+        <div class="board__score" id="computer-score">0</div>
       </div>
     </div> <!-- .board end -->
 
