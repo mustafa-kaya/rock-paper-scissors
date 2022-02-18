@@ -24,14 +24,14 @@ function removeAnimation(event) {
   }
 }
 
-function createComputerAnimation() {
+function createComputerButtonAnimation() {
   let computerButton = document.getElementById('computer');
   const weapons = ['rock', 'paper', 'scissors']; 
   
   for( let i = 0; i < 100; i++ ) {
     let index = i % weapons.length;
     setTimeout(() => {
-      computerButton.children[0].src = `http://127.0.0.1:5500/img/${weapons[index]}-right-black.svg`;
+      computerButton.children[0].src = computerButton.children[0].src.replace(/rock|paper|scissors/, `${weapons[index]}`);
     }, (450 + (450*i)))
   }
 }
