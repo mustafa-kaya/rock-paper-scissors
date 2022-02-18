@@ -1,4 +1,3 @@
-// Functions
 function addAnimation(event) {
   const id = event.target.id;
   const buttonIcon = event.target.children[1]; 
@@ -36,14 +35,3 @@ function createComputerAnimation() {
     }, (450 + (450*i)))
   }
 }
-
-// Function Firing
-const buttons = document.querySelectorAll('button');
-
-for(const button of buttons) {
-  const buttonIcon = button.children[1];
-  button.addEventListener('mouseenter', addAnimation);
-  buttonIcon.addEventListener('animationend', removeAnimation);
-}
-
-// createComputerAnimation();
