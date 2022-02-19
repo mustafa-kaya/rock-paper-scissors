@@ -8,7 +8,9 @@ font-family: 'Work Sans', sans-serif; */
 
 .page__header,
 .page__board,
-.page__game {
+.page__game,
+.page__info,
+.page__result {
 	margin: 50px auto;
 }
 
@@ -72,10 +74,6 @@ font-family: 'Work Sans', sans-serif; */
 	cursor: pointer;
 }
 
-/* .button:hover {
-  background-color: black;
-} */
-
 .button__text {
 	font-size: 20px;
 	pointer-events: none;
@@ -93,6 +91,14 @@ font-family: 'Work Sans', sans-serif; */
 	background-color: #f5222d;
 }
 
+.button--unselected {
+	background-color: #f6f6f6;
+}
+
+.button--disable {
+	pointer-events: none;
+}
+
 .button--reverse {
 	color: black;
 	background-color: white;
@@ -102,6 +108,31 @@ font-family: 'Work Sans', sans-serif; */
 
 .button img {
 	pointer-events: none;
+}
+
+/* .info BLOCK */
+.info {
+	text-align: center;
+	font-family: 'Playfair Display', serif;
+	display: none;
+	flex-direction: column;
+	gap: 10px;
+}
+
+.info__text {
+	font-size: 36px;
+	font-weight: bold;
+}
+
+.info__subtext {
+	font-size: 24px;
+}
+
+/* .result BLOCK */
+.result__text {
+	text-align: center;
+	font-size: 72px;
+	display: none;
 }
 
 /* .footer BLOCK */
