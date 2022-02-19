@@ -88,15 +88,15 @@ function hideOtherSelections(event) {
 function viewComputerSelection(computerWeapon) {
   let computerButton = document.getElementById('computer');
   if (computerWeapon === 'rock') {
-    computerButton.children[0].src = computerButton.children[0].src.replace(/rock|paper|scissors/, 'rock');
+    computerButton.children[0].src = computerButton.children[0].src.replace(/rock-right|paper-right|scissors-right/, 'rock');
     computerButton.children[1].textContent = 'ROCK';
   }
   else if (computerWeapon === 'paper') {
-    computerButton.children[0].src = computerButton.children[0].src.replace(/rock|paper|scissors/, 'paper');
+    computerButton.children[0].src = computerButton.children[0].src.replace(/rock-right|paper-right|scissors-right/, 'paper');
     computerButton.children[1].textContent = 'PAPER';
   }
   else if (computerWeapon === 'scissors') {
-    computerButton.children[0].src = computerButton.children[0].src.replace(/rock|paper|scissors/, 'scissors');
+    computerButton.children[0].src = computerButton.children[0].src.replace(/rock-right|paper-right|scissors-right/, 'scissors');
     computerButton.children[1].textContent = 'SCISSORS';
   }
 }
@@ -111,7 +111,7 @@ function resetRound() {
   paper.classList.remove('button--unselected', 'button--disable', 'button--won', 'button--tie', 'button--lost');
   scissors.classList.remove('button--unselected', 'button--disable', 'button--won', 'button--tie', 'button--lost');
 
-  computerButton.children[0].src = computerButton.children[0].src.replace(/rock|paper|scissors/, 'rock');
+  computerButton.children[0].src = computerButton.children[0].src.replace(/rock-right|paper-right|scissors-right/, 'rock');
   computerButton.children[1].textContent = '***';
 
   document.getElementsByClassName('info')[0].style.display = 'none'
